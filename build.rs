@@ -23,7 +23,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     digest.update(compiler.stdout);
     for (label, directory) in [
         ("renderer", root.clone()),
-        ("ghostline-red", root.join("../ghostline-red")),
+        (
+            "ghostline-red",
+            PathBuf::from(
+                std::env::var_os("DEP_GHOSTLINE_RED_SOURCE_DIR")
+                    .ok_or("decoder source metadata is missing")?,
+            ),
+        ),
     ] {
         let mut files = Vec::new();
         collect(&directory.join("src"), &mut files)?;

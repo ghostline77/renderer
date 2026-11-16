@@ -6,7 +6,7 @@ export self-contained GLBs for browser previews.
 
 ## Build
 
-Use Rust 1.92 or newer and keep the sibling Ghostline Red checkout available.
+Use Rust 1.92 or newer. Cargo fetches Ghostline Red from GitHub.
 Run from this repository:
 
 ```powershell

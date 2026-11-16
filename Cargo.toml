@@ -6,7 +6,7 @@ rust-version = "1.92"
 description = "Native asset preview rendering for Cyberpunk 2077"
 
 [dependencies]
-ghostline-red = { path = "../ghostline-red" }
+ghostline-red = { git = "https://github.com/ghostline77/ghostline-red" }
 anyhow = "1"
 bytemuck = { version = "1", features = ["derive"] }
 clap = { version = "4", features = ["derive"] }
